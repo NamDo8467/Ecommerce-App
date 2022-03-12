@@ -1,0 +1,10 @@
+.filter-name:hover {
+    color: blue !important;
+}
+.filter-detail:hover {
+    text-decoration: underline !important;
+}
+
+.card {
+    border: none !important;
+}

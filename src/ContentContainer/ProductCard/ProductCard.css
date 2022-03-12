@@ -1,0 +1,6 @@
+.description:hover {
+    text-decoration: underline !important;
+}
+.description {
+    font-size: 14px;
+}
