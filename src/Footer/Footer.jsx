@@ -45,10 +45,10 @@ function Footer() {
                     <h6>Mobile Apps</h6>
                     <ul style={style}>
                         <li>
-                            <i class="bi bi-apple"></i> IOS App
+                            <i className="bi bi-apple"></i> IOS App
                         </li>
                         <li>
-                            <i class="bi bi-robot"></i> Android App
+                            <i className="bi bi-robot"></i> Android App
                         </li>
                     </ul>
                 </div>
@@ -67,13 +67,13 @@ function Footer() {
                         Sign up to stay in the loop about the hottest deals,
                         coolest new products, and exclusive sales events.
                     </p>
-                    <div class="input-group mb-3">
+                    <div className="input-group mb-3">
                         <input
                             type="text"
-                            class="form-control"
+                            className="form-control"
                             placeholder=""
                         />
-                        <button class="btn btn-primary">Button</button>
+                        <button className="btn btn-primary">Button</button>
                     </div>
                 </div>
             </div>
