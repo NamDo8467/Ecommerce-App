@@ -1,22 +1,34 @@
-// import Footer from "./Footer/Footer.jsx"
 import Home from "./ContentContainer/Home"
 import All from "./ContentContainer/All/All"
 import Error from "./ContentContainer/Error"
 import { Routes, Route } from "react-router-dom"
-import Product from "./ContentContainer/Product"
+import SpecificProduct from "./ContentContainer/SpecificProduct/SpecificProduct.jsx"
+import Category from "./ContentContainer/Category/Category.jsx"
+import LayoutOfCategory from "./ContentContainer/Category/LayoutOfCategory"
+import { CartProvider } from "../src/CartContext"
+import Cart from "./ContentContainer/Cart/Cart"
+
 function App() {
+    
     return (
-        <div className="App container">
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="all" element={<All />} >
-                    {/* Using Route when filtering */}
-                    {/* <Route path="" element={<All/>}/> */}
-                </Route>
-                <Route path="/product/:productId" element={<Product />}/>
-                <Route path="*" element={<Error />} />
-            </Routes>
-        </div>
+        <CartProvider>
+            <div className="App container">
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="all" element={<All />} />
+                    <Route path="category" element={<Category />}>
+                        <Route path="electronics" element={<LayoutOfCategory category="electronics" />} />
+                        <Route path="jewelery" element={<LayoutOfCategory category="jewelery" />} />
+                        <Route path="menclothing" element={<LayoutOfCategory category="men's clothing" />} />
+                        <Route path="womenclothing" element={<LayoutOfCategory category="women's clothing" />} />
+                    </Route>
+
+                    <Route path="cart" element={<Cart />} />
+                    <Route path="product/:productId" element={<SpecificProduct />} />
+                    <Route path="*" element={<Error />} />
+                </Routes>
+            </div>
+        </CartProvider>
     )
 }
 
