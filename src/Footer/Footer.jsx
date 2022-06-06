@@ -73,7 +73,7 @@ function Footer() {
                             className="form-control"
                             placeholder=""
                         />
-                        <button className="btn btn-primary">Button</button>
+                        <button className="btn btn-primary">Sign up</button>
                     </div>
                 </div>
             </div>
