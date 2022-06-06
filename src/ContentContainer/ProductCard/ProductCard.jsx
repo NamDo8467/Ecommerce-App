@@ -9,7 +9,7 @@ function ProductCard({ image, description, price, id }) {
     if (description.length > StandardLengthForDescription) {
         description = description.slice(0, 38)
     }
-
+    
     return (
         <div className="col-sm-3">
             <div className="d-flex flex-column p-5">
