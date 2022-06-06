@@ -5,6 +5,7 @@ import Loading from "../Loading"
 
 const FilterBar = ({ className, setCategory }) => {
     const [categoryList, setCategoryList] = useState(null)
+   
     useEffect(() => {
         ;(async () => {
             try {
@@ -16,7 +17,7 @@ const FilterBar = ({ className, setCategory }) => {
             }
         })()
         return () => {
-            setCategoryList([])
+            setCategoryList(null)
         }
     }, [])
 
