@@ -5,9 +5,7 @@ function Banner() {
     return (
         <div className="d-flex justify-content-center align-items-center bg-primary">
             <div className="headline col-4">
-                <h2>
-                    Find the best offers from our latest sales, all in one place
-                </h2>
+                <h2>Find the best offers from our latest sales, all in one place</h2>
                 <Link to="/all" className="btn btn-light">
                     Shop now
                 </Link>
