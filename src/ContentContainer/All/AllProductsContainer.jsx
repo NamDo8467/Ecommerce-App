@@ -5,11 +5,13 @@ import Footer from "../../Footer/Footer"
 import ProductCard from "../ProductCard/ProductCard"
 import FilterBar from "../FilterBar/FilterBar"
 
+
 function AllProductsContainer() {
     const [productList, setProductList] = useState(null)
     const [loadingMessage, setLoadingMessage] = useState("Loading...")
-
+    const [errorMessage, setErrorMessage] = useState("Error...")
     const [category, setCategory] = useState("all")
+    
 
     useEffect(() => {
         ;(async () => {
@@ -17,6 +19,7 @@ function AllProductsContainer() {
                 const result = await fetch("https://fakestoreapi.com/products")
                 const data = await result.json()
                 setProductList(data)
+                
             } catch (error) {
                 setLoadingMessage("Can not load data")
                 console.log(error)
@@ -74,6 +77,7 @@ function AllProductsContainer() {
                 </div>
             </div>
             <Footer />
+            
         </div>
     )
 }
