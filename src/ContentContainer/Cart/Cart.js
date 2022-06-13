@@ -69,10 +69,6 @@ function Cart() {
         totalPrice += item[0].price * item[1].quantity
     })
 
-    const increaseQuantity = item => {
-        addItemToCart(item)
-    }
-
     return (
         <div>
             <Header />
@@ -130,7 +126,7 @@ function Cart() {
                                                 removeItemFromCart(item[0])
                                             }}
                                         >
-                                            &nbsp; <p style={{display: "inline" }}>Remove</p>
+                                            &nbsp; <p style={{ display: "inline" }}>Remove</p>
                                         </i>
                                     </div>
                                 </div>
