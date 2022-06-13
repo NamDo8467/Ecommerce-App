@@ -5,7 +5,10 @@ import CartContext from "../CartContext"
 
 function Header() {
     const { itemList } = useContext(CartContext)
-    console.log(itemList)
+    let totalItemInList = 0
+    itemList.forEach(item => {
+        totalItemInList += item[1].quantity
+    })
     return (
         <header>
             <div className="search d-flex justify-content-between py-3">
@@ -20,7 +23,7 @@ function Header() {
                     <h4>
                         <i className="bi bi-bag-fill" style={{ color: "black", fontStyle: "normal" }}>
                             &nbsp; &nbsp;
-                            <span>{itemList.length}</span>
+                            <span>{totalItemInList}</span>
                         </i>
                     </h4>
                 </Link>
