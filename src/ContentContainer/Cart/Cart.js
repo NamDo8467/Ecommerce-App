@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react"
+import React, { useContext } from "react"
 import CartContext from "../../CartContext"
 import Header from "../../Header/Header"
 import Footer from "../../Footer/Footer"
@@ -7,8 +7,6 @@ function Cart() {
     const { itemList, addItemToCart, deleteItemFromCart, removeItemFromCart } = useContext(CartContext)
     const SAVE_PRICE = 5.95
     let date = new Date()
-    const [quantity, setQuantity] = useState(1)
-    const [total, setTotal] = useState(0)
     const getMonthInitials = () => {
         switch (date.getMonth()) {
             case 0:
@@ -92,7 +90,7 @@ function Cart() {
                                     </p>
                                 </div>
                                 <div className="quantity-setter col-4">
-                                    {item[1].quantity == 1 ? (
+                                    {item[1].quantity === 1 ? (
                                         <button className="btn btn-dark p-1 disabled">
                                             <i className="bi bi-dash"></i>
                                         </button>
